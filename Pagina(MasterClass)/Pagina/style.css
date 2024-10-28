@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
+    background-color: black; 
+    color: white; 
+    font-family: Arial, sans-serif; 
+}
+
+.content {
+    flex: 1; 
+}
+
+.row {
+    display: flex;
+    min-height: 100vh; 
+}
+
+.col-md-3 {
+    flex: 1;
+    max-width: 250px; 
+    margin-right: 20px;
+    background-color: black;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.col-md-9 {
+    flex: 3;
+    padding: 15px;
+    background-color: black;
+    overflow-y: auto;
+    margin-left: 120px;
+}
+
+.list-group {
+    background-color: black; 
+    border-radius: 8px; 
+    padding: 15px;
+    list-style: none; 
+    padding-left: 0; 
+    margin-left: 100px;
+}
+.list-group-item {
+    background-color: black; 
+    color: white; 
+    text-align: left; 
+    padding-left: 0; 
+}
+
+    .list-group-item a {
+        color: #ffffff; 
+    }
+
+        .list-group-item a:hover {
+            color: #d4edda;
+        }
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+}
+
+h2, h4 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+ul li {
+    margin-bottom: 10px; 
+    padding: 10px; 
+    list-style-type: none; 
+}
+
+.submenu {
+    max-height: 0px; 
+    padding-left: 20px; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    background-color: black; 
+    color: white; 
+    margin-left: 0px;
+    width: 200%
+}
+.submenu li {
+    padding: 5px 0;
+}
+
+
+.submenu-active .submenu {
+    max-height: 500px; 
+}
+
+.main-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover .submenu {
+    max-height: 200px; 
+}
+.custom-hover {
+    text-decoration: none; 
+    color: #fff; 
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; 
+    text-align: left; 
+    display: block; 
+}
+
+
+    .custom-hover:hover {
+        color: #ffffff; 
+        text-shadow: 0 0 15px #28a745, 0 0 25px #28a745; 
+    }
+
+.whatsapp-title {
+    color: #28a745 !important; 
+    font-family: 'Merriweather', serif; 
+    font-size: 2.5em; 
+    font-weight: 500; 
+}
+
+.multicolortext {
+    background-image: linear-gradient(to right, #F58529, #FEDA77, #DD2A7B, #8134AF, #D62976, #F77737);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    font-weight: 500; 
+}
+
+.facebook-title {
+    color: #3b5998 !important; 
+    font-family: 'Merriweather', serif; 
+    font-size: 2.5em; 
+    font-weight: 500; 
+}
+
+.twitter-title {
+    color: #1da1f2 !important; 
+    font-family: 'Merriweather', serif; 
+    font-size: 2.5em; 
+    font-weight: 500;
+}
+.nuevaSeccion-title {
+    color: #6E5F56 !important; 
+    font-family: 'Merriweather', serif; 
+    font-size: 2.5em; 
+    font-weight: 500; 
+}
+.custom-hover-wh {
+    text-decoration: none; 
+    color: #28a745 !important; 
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    text-align: left; 
+    display: block; 
+    font-family: 'Merriweather', serif; 
+    font-size: 1.5em; 
+    font-weight: 500; 
+}
+
+    .custom-hover-wh:hover {
+        color: #28a745; 
+        text-shadow: 0 0 15px #28a745, 0 0 25px #28a745;
+    }
+
+
+.custom-hover-ig {
+    text-decoration: none;
+    color: #c32aa3 !important;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    text-align: left;
+    display: block;
+    background-image: linear-gradient(to right, #F58529, #FEDA77, #DD2A7B, #8134AF, #D62976, #F77737);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Merriweather', serif; 
+    font-size: 1em; 
+    font-weight: 500; 
+}
+
+    .custom-hover-ig:hover {
+        color: #c32aa3; 
+        text-shadow: 0 0 15px #c32aa3, 0 0 25px #c32aa3; 
+    }
+.custom-hover-fc {
+    text-decoration: none; 
+    color: #3b5998 !important; 
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    text-align: left; 
+    display: block; 
+    font-family: 'Merriweather', serif; 
+    font-size: 1.5em; 
+    font-weight: 500; 
+}
+
+    .custom-hover-fc:hover {
+        color: #3b5998; 
+        text-shadow: 0 0 15px #3b5998, 0 0 25px #3b5998; 
+    }
+.custom-hover-tw {
+    text-decoration: none; 
+    color: #1da1f2 !important; 
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; 
+    text-align: left; 
+    display: block; 
+    font-family: 'Merriweather', serif; 
+    font-size: 1.5em; 
+    font-weight: 500; 
+}
+
+    .custom-hover-tw:hover {
+        color: #1da1f2; 
+        text-shadow: 0 0 15px #1da1f2, 0 0 25px #1da1f2; 
+    }
+.custom-hover-new {
+    text-decoration: none;
+    color: #6E5F56 !important;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    text-align: left;
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em; 
+    font-weight: 500; 
+}
+
+    .custom-hover-new:hover {
+        color: #6E5F56;
+        text-shadow: 0 0 15px #6E5F56, 0 0 25px #6E5F56;
+    }
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.titulo-redes {
+    margin-left: 115px !important; 
+    font-size: 35px !important; 
+    font-weight: normal;
+}
+
+.titulo-indice {
+    margin-left: 100px !important; 
+    font-size: 25px !important; 
+    font-weight: normal;
+}
+.text-white1{
+    font-size: 25px !important; 
+    font-weight: normal;
+}

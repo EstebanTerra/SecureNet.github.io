@@ -1,0 +1,1256 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #080808;
+    color: #fff;
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 12%;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-secure {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: #0f5;
+    display: none;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1,1);
+}
+
+span {
+    color: #0f5;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 2.4rem;
+    margin-left: 4rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.navbar-item i {
+    font-size: 3.5rem;
+    margin-right: 0.5rem;
+    transition: transform 0.5s ease, color 0.5s ease; /* Movimiento del icono */
+}
+
+.navbar-item .text {
+    position: absolute;
+    font-size: 2.4rem;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    margin-right: 20px; /* Transición suave */
+}
+
+.navbar-item:hover i {
+    transform: translateX(-25px); /* Mueve el icono ligeramente a la izquierda */
+    color: #0f5;
+}
+
+.navbar-item:hover .text {
+    opacity: 1;
+    visibility: visible;
+    left: 10px; /* Alinea el texto donde estaba el ícono */
+}
+
+.navbar-item:hover {
+    color: #0f5;
+    margin-right: 4px;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 12%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+    padding-top: 3rem;
+    flex-direction: row-reverse;
+}
+
+#home{
+    scroll-margin-top: 10rem;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    top: 0;
+}
+
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-content h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #090;
+}
+
+.home-content p{
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.home-img img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0px 40px #0f5;
+    transition: .4s ease-in-out;
+}
+
+.home-img img:hover{
+    box-shadow: 0 0 25px #0f5,
+                0 0 50px #0f5,
+                0 0 100px #0f5;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid #0f5;
+    border-radius: 50%;
+    color: #0f5;
+    margin: 1.5rem 0.5rem;
+    transition: .3s ease;
+}
+
+.social-icons .whatsapp-icon:hover{
+    color: #fff;
+    background-color: #0f5;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #0f5;
+}
+
+.twitter-icon:hover{
+    color: #fff;
+    background-color: #111;
+    border: 2px solid #fff;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #fff;
+}
+
+.facebook-icon:hover{
+    color: #fff;
+    background-color: #00f;
+    border: 2px solid #00f;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #00f;
+}
+
+.instagram-icon:hover{
+    color: #fff;
+    background-color: #f00;
+    border: 2px solid #f00;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #f00;
+}
+
+.ley-icon:hover{
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #fff;
+}
+
+.divider-line{
+    border: none;
+    border-top: 2px solid #fff;
+    margin: 2rem auto 1rem auto;
+    width: 85%;
+}
+
+/*WhatsApp*/
+
+.whatsapp{
+    margin-top: 9rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#whatsapp{
+    scroll-margin-top: 13rem;
+}
+
+.what-conteiner h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+:root {
+    --cards: 4;
+    --cardHeight: 50rem;
+    --cardTopPadding: 1.5em;
+    --cardMargin: 8vw;
+}
+
+.what-conteiner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#cards {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
+}
+
+#card1{
+    --index: 1;
+}
+#card2{
+    --index: 2;
+}
+#card3{
+    --index: 3;
+}
+
+.card{
+    position: sticky;
+    top: 20%;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body{
+    background-color: #111;
+}
+#card2 .card-body{
+    background-color: #222;
+}
+#card3 .card-body{
+    background-color: #333;
+}
+
+.card-body{
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 7px #0f5;
+    height: var(--cardHeight);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-body:hover{
+    box-shadow: 0 0 20px #0f5;
+}
+
+.card-body h2{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card-body p{
+    font-size: 2.3rem;
+    text-align: justify;
+}
+
+.BTNver{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #0f5;
+    color: #0f5;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    width: 60rem;
+    margin-top: 4.5rem;
+}
+
+.BTNver:hover{
+    color: #fff;
+    background-color: #0f5;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #0f5;
+}
+
+.card-body ul{
+    list-style-type: "➣";
+    font-size: 1.6rem;
+    text-align: justify;
+    margin: 0 8%;
+}
+
+/*Twitter*/
+
+.twitter-conteiner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.twitter h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 10;
+    margin-top: 2rem;
+}
+
+
+.twitter{
+    margin-left: 0;
+    padding: 5% 5%;
+}
+
+#twitter{
+    scroll-margin-top: 13rem;
+}
+
+.cardT{
+    position: relative;
+    width: 320px;
+    height: 450px;
+}
+
+.cardT .p1{
+    font-size: 1.7rem;
+}
+
+.cardT .p2{
+    font-size: 1.33rem;
+}
+
+.cardT .p3{
+    font-size: 1.5rem;
+}
+
+.cardT .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.cardT .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 0 10px #fff;
+}
+
+.cardT .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardT .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 3rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .9);
+    text-align: center;
+}
+
+.cardT .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #000;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px #fff;
+    justify-content: space-between;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.cardT .back h3{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cardT .back .link-T{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 60%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    margin: 0 auto;
+}
+
+.link-T:hover{
+    box-shadow: 0 0 10px #fff;
+    transform: scale(1.1) translateY(-4px);
+}
+
+.cardT:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.cardT:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*Facebook*/
+
+.facebook{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.facebook h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 10;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#facebook{
+    scroll-margin-top: 13rem;
+}
+
+.containerF{
+    height: 450px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.cardF{
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0 0 10px #00f;
+    margin: 0 20px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.cardF > .row{
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.cardF > .row > .iconF{
+    background-color: #222;
+    color: #fff;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-left: 20px;
+    border-radius: 20px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.cardF > .row > .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    overflow: hidden;
+    height: 450px;
+    width: 100%;
+    padding: 0 15px;
+    opacity: 0;
+    font-size: 2rem;
+    color: white;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+
+.description ul{
+    list-style-type: "➣";
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0 8%;
+}
+
+.description h4{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+input{
+    display: none;
+}
+
+input:checked + .cardF{
+    width: 650px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 30px #00f;
+}
+
+input:checked + .cardF::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+input:checked + .cardF .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    z-index: 2;
+    color: white;
+}
+
+input:checked + .cardF[for="c1"]{
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-facebook-logotipos_125322-28.jpg);
+}
+
+input:checked + .cardF[for="c2"]{
+    background-image: url(imagenes/Imagen1.png);
+}
+
+input:checked + .cardF[for="c3"]{
+    background-image: url(imagenes/fondoF.jpg);
+}
+
+input:checked + .cardF .row .iconF{
+    display: none;
+}
+
+.link-F{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 40%;
+    border: 1px solid #00f;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    margin: 10px auto;
+}
+
+.link-F:hover{
+    box-shadow: 0 0 15px #00f;
+    transform: scale(1.1) translateY(-4px);
+}
+
+.parrafo2{
+    font-size: 1.6rem;
+}
+
+.parrafo3 > ul > li{
+    font-size: 1.5rem;
+}
+
+/*Instagram*/
+
+.Instagram{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Instagram h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 10rem;
+    z-index: 10;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#instagram{
+    scroll-margin-top: 13rem;
+}
+
+.slider-I {
+    position: relative;
+    width: 60rem;
+    height: 60rem;
+    perspective: 100px;
+}
+
+.item-I {
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0;
+    padding: 20px;
+}
+
+.item-I h2{
+    font-size: 70px;
+    font-weight: 900;
+    font-stretch: condensed;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: Slussen;
+}
+
+.item-I p{
+    font-size: 2rem;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 50%;
+    border: 0;
+    font-size: 24px;
+}
+
+.item-1 p{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.item-2 p{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.item-3 p{
+    font-size: 1.9rem;
+    margin-bottom: 5px;
+}
+
+.item-1 {
+    background: #333;
+}
+.item-2 {
+    background: #111;
+}
+.item-3 {
+    background: #222;
+}
+
+.item-I:nth-child(3) {
+    left: 0;
+    top: 0;
+}
+.item-I:nth-child(2) {
+    left: 20px;
+    top: -20px;
+}
+.item-I:nth-child(1) {
+    left: 40px;
+    top: -40px;
+}
+
+.link-I{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 40%;
+    border: 1px solid #f00;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    margin: 20px auto;
+}
+
+.link-I:hover{
+    box-shadow: 0 0 15px #f00;
+    transform: scale(1.1) translateY(-4px);
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Redes{
+    margin-right: 2rem;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    text-align: justify;
+}
+
+.box{
+    width: 350px;
+}
+
+.red-social{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 60px;
+    font-size: 4rem;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.pie-pagina .grupo-1 .red-social .I-icono:hover{
+    color: #f00;
+}
+
+.pie-pagina .grupo-1 .red-social .F-icono:hover{
+    color: #00f;
+}
+
+.pie-pagina .grupo-1 .red-social .X-icono:hover{
+    color: #000;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 1.5rem;
+}
+
+/*Leyes*/
+
+.Leyes{
+    padding: 1rem 4rem;
+}
+
+.Leyes h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+#politica{
+    scroll-margin-top: 13.5rem;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ley25, .ley26{
+    width: 50rem;
+    height: 550px;
+    border: 1px solid #fff;
+    margin: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #fff;
+    transition: .2s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 5rem;
+}
+
+.ley25:hover, .ley26:hover{
+    box-shadow: 0 0 15px #fff;
+    transform: scale(1.01) translateY(-3px);
+}
+
+.card-container h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.card-container p{
+    font-size: 1.7rem;
+    text-align: justify;
+    margin: 10px;
+}
+
+
+.ley-mas{
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    width: 40%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    margin: 10px auto;
+}
+
+.ley-mas:hover{
+    box-shadow: 0 0 15px #fff;
+    transform: scale(1.1) translateY(-4px);
+}
+
+#mas26{
+    margin-top: 3rem;
+}
+
+.navbar-celular {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posición absoluta relativa al contenedor más cercano con posición relativa */
+    top: 100%; /* Justo debajo del #menu-icon */
+    right: 0; /* Alineado a la derecha */
+    background-color: rgba(0, 0, 0, .8);
+    padding: 1rem;
+    z-index: 99;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar-celular-item {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #0f5;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Cambia el color al hacer hover en las opciones */
+.navbar-celular-item:hover {
+    color: #fff;
+}
+
+/* Mostrar el segundo navbar al hacer hover en el ícono del menú */
+#menu-icon:hover .navbar-celular {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos adicionales para dispositivos móviles */
+@media (max-width: 768px) {
+    /*Header*/
+    .navbar {
+        display: none;
+    }
+
+    .header{
+        position: sticky;
+        height: 100px;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /*Primera seccion*/
+
+
+    section {
+        padding: 5rem 5%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 50vw;
+        margin-top: 10px;
+    }
+
+    .home-content {
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+
+    .home-content h2 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+    .icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 2.5rem;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    .divider-line{
+        width: 93%;
+    }
+
+    /*WhatsApp*/
+    .what-conteiner {
+        width: 95%;
+        padding: 0 2%;
+    }
+
+    #cards {
+        grid-template-rows: repeat(var(--cards), minmax(40rem, auto)); /* Ajustar el tamaño de las tarjetas */
+        gap: 2rem; /* Reducir el gap entre tarjetas */
+    }
+
+    /* Mantener el sticky en las tarjetas pero con ajustes */
+    .card {
+        position: sticky;
+        top: 10%; /* Ajustar el espacio superior para móviles */
+        padding-top: 0;
+    }
+
+    .card:nth-child(1){
+        top: calc(65px + 7%);
+    }
+    .card:nth-child(2){
+        top: calc(70px + 14%);
+    }
+    .card:nth-child(3){
+        top: calc(80px + 20%);
+    }
+
+    /* Reducir tamaño de los elementos dentro de las tarjetas */
+    .card-body {
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 20px; /* Reducir el borde en móviles */
+    }
+
+    .card-body h2 {
+        font-size: 2.5rem;
+    }
+
+    .card-body p {
+        font-size: 1.8rem;
+    }
+
+    .BTNver {
+        width: 100%;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    .card-body ul {
+        font-size: 1.4rem;
+        margin: 0 5%;
+    }
+
+    /*X*/
+    .twitter-conteiner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardT{
+        margin: 15px;
+    }
+
+    /*Facebook*/
+    
+    input:checked + .cardF{
+        width: 400px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 0 30px #00f;
+    }
+    .cardF{
+        margin: 15px 0;
+    }
+    .description p{
+        font-size: 1.9rem;
+    }
+
+    .description li{
+        font-size: 1.7rem;
+    }
+    .containerF{
+        display: block;
+    }
+    .facebook{
+        margin-bottom: 90rem;
+    }
+    /*Instagram*/
+    .Instagram{
+        text-align: center;
+    }
+    
+    .item-I{
+        width: 40rem;
+        height: 40rem;
+        margin-left: 10px;
+    }
+    .item-I h2{
+        font-size: 4rem;
+    }
+    .item-I p{
+        font-size: 1.3rem;
+    }
+    .item-3 p{
+        font-size: 1.2rem;
+    }
+    .link-I{
+        width: 200px;
+        height: 50px;
+    }
+    /*Leyes*/
+    .card-container{
+        display: block;
+        text-align: center;
+        display: grid;
+    }
+    .ley25, .ley26{
+        width: 31rem;
+        height: 500px;
+        border: 1px solid #fff;
+        margin: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #fff;
+        transition: .2s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 5rem;
+    }
+    .card-container p{
+        font-size: 1.6rem;
+    }
+    .ley-mas{
+        height: 40px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*footer*/
+    .pie-pagina .grupo-1 {
+        display: block;
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .pie-pagina .grupo-1 .red-social {
+        justify-content: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure img {
+        width: 300px;
+    }
+
+    .pie-pagina .grupo-1 .box h2 {
+        font-size: 2rem;
+    }
+
+    .pie-pagina .grupo-1 .box p {
+        font-size: 1.6rem;
+        margin: 20px;
+    }
+    
+    .red-social a{
+        margin: 0 40px;
+    }
+
+    .pie-pagina .grupo-2 small {
+        font-size: 1.7rem;
+    }
+}
